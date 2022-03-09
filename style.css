@@ -1,0 +1,118 @@
+@import url('https://fonts.googleapis.com/css2?family=Big+Shoulders+Display:wght@700&family=Lexend+Deca&display=swap');
+
+:root {
+  --background-sedans: hsl(31, 77%, 52%);
+  --background-suvs: hsl(184, 100%, 22%);
+  --background-luxury: hsl(179, 100%, 13%);
+  /* transparent white is used for paragraphs */
+  --transparent-white: hsla(0, 0%, 100%, 0.75);
+  /* very light gray is used for the main background, the headings and the buttons */
+  --very-light-gray: hsl(0, 0%, 95%);
+}
+
+body {
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Lexend Deca', sans-serif;
+  font-size: 15px;
+  background-color: var(--very-light-gray);
+}
+
+.container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+  width: 900px;
+  margin: 0 auto;
+}
+
+img {
+  margin: 20px 0 5px 0;
+}
+
+h1 {
+  font-family: 'Big Shoulders Display', cursive;
+  text-transform: uppercase;
+  color: var(--very-light-gray);
+  font-size: 2.5rem;
+}
+
+p {
+  color: var(--transparent-white);
+  line-height: 1.4rem;
+  margin-bottom: 100px;
+}
+
+.sedans {
+  background-color: var(--background-sedans);
+  padding: 45px;
+  border-top-left-radius: 20px;
+  border-bottom-left-radius: 20px;
+}
+
+.suvs {
+  background-color: var(--background-suvs);
+  padding: 45px;
+}
+
+.luxury {
+  background-color: var(--background-luxury);
+  padding: 45px;
+  border-top-right-radius: 20px;
+  border-bottom-right-radius: 20px;
+}
+
+button {
+  font-family: inherit;
+  font-size: 0.9rem;
+  padding: 15px 40px;
+  border-radius: 30px;
+  border: 2px solid transparent;
+}
+
+.container .sedans button {
+  color: var(--background-sedans);
+}
+
+.container .suvs button {
+  color: var(--background-suvs);
+}
+
+.container .luxury button {
+  color: var(--background-luxury);
+}
+
+button:hover {
+  cursor: pointer;
+  background: none;
+  border: 2px solid var(--very-light-gray) !important;
+  color: var(--very-light-gray) !important;
+}
+
+@media (max-width: 750px) {
+  .container {
+    flex-direction: column;
+    width: 300px;
+    height: 100%;
+    margin: 40px auto;
+  }
+
+  p {
+    margin-bottom: 30px;
+  }
+
+  .sedans {
+    border-top-left-radius: 20px;
+    border-top-right-radius: 20px;
+    border-bottom-left-radius: 0px;
+  }
+
+  .luxury {
+    background-color: var(--background-luxury);
+    padding: 45px;
+    border-top-right-radius: 0px;
+    border-bottom-left-radius: 20px;
+    border-bottom-right-radius: 20px;
+  }
+}
